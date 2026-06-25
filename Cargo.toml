@@ -1,0 +1,15 @@
+[package]
+name = "safe-corona"
+version = "0.1.0"
+edition = "2024"
+license = "GPL-3.0-only"
+publish = false
+
+# Corona signing is performed by the luxfi corona stack (Go / lattice), not by
+# a CLI in this repository — unlike safe-frost, whose secp256k1 Schnorr signer
+# is small enough to ship as a Rust binary. The on-chain verifier follows the
+# 0x012206 precompile wire format exactly, so any conforming Corona signer works.
+# This manifest exists to mirror the safe-frost workspace layout; it declares no
+# binary.
+
+[dependencies]
